@@ -1,3 +1,3 @@
 ## Salt-remover
 
-Remove your salt by "<playername> got <item> from <box>"
+No more P2w messages "playername got item from box"
