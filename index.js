@@ -20,6 +20,6 @@ module.exports = function SaltRemover(dispatch) {
 
     dispatch.hook('S_SYSTEM_MESSAGE', 1, (event) => {
         if (enabled)
-            event.message.startsWith(`@${sysmsg.maps.get(dispatch.base.protocolVersion).name.get('SMT_GACHA_REWARD')}\v`) ? false : undefined
+            return event.message.startsWith(`@${sysmsg.maps.get(dispatch.base.protocolVersion).name.get('SMT_GACHA_REWARD')}\v`) ? false : undefined
     });
 };
