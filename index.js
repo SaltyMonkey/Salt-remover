@@ -1,5 +1,4 @@
-const sysmsg = require('tera-data-parser').sysmsg;
-Command = require('command');
+const Command = require('command');
 
 module.exports = function SaltRemover(dispatch) {
     const command = Command(dispatch);
@@ -20,6 +19,6 @@ module.exports = function SaltRemover(dispatch) {
 
     dispatch.hook('S_SYSTEM_MESSAGE', 1, (event) => {
         if (enabled)
-            return event.message.startsWith(`@${sysmsg.maps.get(dispatch.base.protocolVersion).name.get('SMT_GACHA_REWARD')}\v`) ? false : undefined
+            return dispatch.parseSystemMessage(event.message).id == "SMT_GACHA_REWARD" ? false : undefined
     });
 };

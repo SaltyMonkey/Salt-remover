@@ -1,6 +1,7 @@
 {
   "files": {
-    "index.js": "bc3638af0ad0c152d4e510c0c60c9107d8393c6343ac18710d44481bb2acef9c",
-    "module.json": "c08d822dcd41b224ee30f118a61aecdf99ef15eaada173e91640bcc3405410f8"
+    "index.js": "4dbded48d4f65ae40bf9f71e7816de6ad5e3afc6e0fe57d6baf2da9f00b4b61a",
+    "module.json": "c08d822dcd41b224ee30f118a61aecdf99ef15eaada173e91640bcc3405410f8",
+    "README.md": "79cd6f5dcbf115fe4ff81e19e9cbc7f2aa6010050e507c3071b0921e04daef9c"
   }
 }
