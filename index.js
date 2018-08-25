@@ -1,8 +1,6 @@
-const Command = require('command');
 const config = require("./config.json");
 
-module.exports = function SaltRemover(dispatch) {
-    const command = Command(dispatch);
+module.exports = function SaltRemover(mod) {
     let enabled = config.enabled;
     const smtList = {
         "SMT_GACHA_REWARD" : true,
@@ -17,24 +15,22 @@ module.exports = function SaltRemover(dispatch) {
         "SMT_BATTLE_PARTY_RESURRECT": true
     };
 
-    command.add("salt", (option) => {
-        switch (option) {
-            case "state": 
-                command.message(`[Salt-Remover] Enabled: ${enabled}`);
-                break;
-            case "on":
-                command.message("[Salt-Remover] Activated");
+    mod.command.add("salt", {
+            $none() { 
+                command.message(`Enabled: ${enabled}`);
+            },
+            on() {
+                command.message("Activated");
                 enabled = true;
-                break;
-            case "off":
-                command.message("[Salt-Remover] Deactivated");
+            },
+            off() {
+                command.message("Deactivated");
                 enabled = false;
-                break;
-        }
+            }
     });
 
-    dispatch.hook('S_SYSTEM_MESSAGE', 1, (event) => {
+    mod.hook("S_SYSTEM_MESSAGE", 1, (event) => {
         if (enabled)
-            return (smtList[dispatch.parseSystemMessage(event.message).id]) ? false : undefined;
+            return (smtList[mod.parseSystemMessage(event.message).id]) ? false : undefined;
     });
 };

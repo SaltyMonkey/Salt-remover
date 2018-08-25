@@ -1,4 +1,8 @@
 {
+    "disableAutoUpdate": false,
+    "options": {
+        "niceName": "Salt Remover"
+    },
     "servers": ["https://raw.githubusercontent.com/SaltyMonkey/Salt-remover/master/"],
     "supportUrl": "https://github.com/SaltyMonkey/Salt-remover/issues"
 }
