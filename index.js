@@ -17,20 +17,20 @@ module.exports = function SaltRemover(mod) {
 
     mod.command.add("salt", {
             $none() { 
-                command.message(`Enabled: ${enabled}`);
+                mod.command.message(`Enabled: ${enabled}`);
             },
             on() {
-                command.message("Activated");
+                mod.command.message("Activated");
                 enabled = true;
             },
             off() {
-                command.message("Deactivated");
+                mod.command.message("Deactivated");
                 enabled = false;
             }
     });
 
     mod.hook("S_SYSTEM_MESSAGE", 1, (event) => {
-        if (enabled)
-            return (smtList[mod.parseSystemMessage(event.message).id]) ? false : undefined;
+        if (!enabled) return;
+        return (smtList[mod.parseSystemMessage(event.message).id]) ? false : undefined;
     });
 };
