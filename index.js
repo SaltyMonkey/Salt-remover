@@ -5,6 +5,7 @@ module.exports = function SaltRemover(mod) {
     const smtList = {
         "SMT_GACHA_REWARD" : true,
         "SMT_MAX_ENCHANT_SUCCEED": true,
+        "SMT_PREMIUMCOMPOSE_REWARD" : true,
         "SMT_SKILL_FAIL_CATEGORY": true,
         "SMT_ITEM_USED": true,
         "SMT_ITEM_DELETED": true,
