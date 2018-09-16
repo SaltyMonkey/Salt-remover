@@ -2,6 +2,7 @@ const config = require("./config.json");
 
 module.exports = function SaltRemover(mod) {
     let enabled = config.enabled;
+    
     const smtList = {
         "SMT_GACHA_REWARD" : true,
         "SMT_MAX_ENCHANT_SUCCEED": true,
@@ -18,17 +19,10 @@ module.exports = function SaltRemover(mod) {
 
     mod.command.add("salt", {
             $none() { 
-                mod.command.message(`Enabled: ${enabled}`);
-            },
-            on() {
-                mod.command.message("Activated");
-                enabled = true;
-            },
-            off() {
-                mod.command.message("Deactivated");
-                enabled = false;
+                enabled = !enabled;
+			    mod.command.message(`Salt remover ${enabled ? 'en' : 'dis'}abled`)
             }
-    });
+    }, this);
 
     mod.hook("S_SYSTEM_MESSAGE", 1, (event) => {
         if (!enabled) return;
