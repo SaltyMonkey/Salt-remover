@@ -14,7 +14,8 @@ module.exports = function SaltRemover(mod) {
         "SMT_CONVERT_EVENT_SEED_FAIL": true,
         "SMT_ENCHANT_FAILED": true,
         "SMT_BATTLE_PARTY_DIE": true,
-        "SMT_BATTLE_PARTY_RESURRECT": true
+        "SMT_BATTLE_PARTY_RESURRECT": true,
+        "SMT_CANNOT_TAKE_EQUIPMENT_EXP": true
     };
 
     mod.command.add("salt", {
