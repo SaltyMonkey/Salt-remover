@@ -1,5 +1,8 @@
 {
     "disableAutoUpdate": false,
+    "name": "Salt-Remover",
+	"author": "SaltyMonkey",
+	"description": "Removing useless messages from your screen caused by salt-events",
     "options": {
         "niceName": "Salt Remover"
     },
