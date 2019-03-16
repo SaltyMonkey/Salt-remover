@@ -17,7 +17,8 @@ module.exports = function SaltRemover(mod) {
         "SMT_BATTLE_PARTY_RESURRECT": true,
         "SMT_CANNOT_TAKE_EQUIPMENT_EXP": true,
         "SMT_BAN_PARTY_PARTYPLAYER_BF_FAIL": true,
-        "SMT_HUNTINGZONE_EVENT_ANNOUNCE": true
+        "SMT_HUNTINGZONE_EVENT_ANNOUNCE": true,
+		"SMT_GOLDENBELL_MESSAGE": true
         
     };
 
