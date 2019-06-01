@@ -33,4 +33,8 @@ module.exports = function SaltRemover(mod) {
         if (!enabled) return;
         return (smtList[mod.parseSystemMessage(event.message).id]) ? false : undefined;
     });
+
+    mod.hook("S_ABNORMALITY_FAIL", "raw", ()=> {
+        return enabled ? false : undefined;
+    });
 };
