@@ -4,8 +4,8 @@
 			"overwrite": false,
 			"hash": "b8724eacf61d31cb060d51829bf519df77cadf71bfc4c5e8fa3cadc0fd61e2fc"
 		},
-		"index.js": "69ccbc8ed7270065bb5766d63b557c7a385e3ee33a1eab1c1b73391fa1bedd57",
-		"module.json": "d4267c8985aeb11487c1bfb44db26ae017ac3dc5e9d7b6b0dbe1c3acbfe329e1"
+		"index.js": "85ab86ed162f085da8113ffa2049d5512ad2345e0fceb2231eda71417889eb5a",
+		"README.md": "61faf9947751cbf2480ff3a3eafacd0eff9b8089269b03a79897ba1c8553e2c1"
 	},
 	"defs": {
 		"S_SYSTEM_MESSAGE": 1

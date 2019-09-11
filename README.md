@@ -10,6 +10,7 @@ Simple mod which can remove annoying messages:
 * You cannot use this skill
 * Your party member ressurected
 * Your party member die
+* Fish catch
 
 ## Commands:
 
