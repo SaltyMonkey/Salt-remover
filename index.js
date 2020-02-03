@@ -19,14 +19,23 @@ module.exports = function SaltRemover(mod) {
         "SMT_BAN_PARTY_PARTYPLAYER_BF_FAIL": true,
         "SMT_HUNTINGZONE_EVENT_ANNOUNCE": true,
         "SMT_GOLDENBELL_MESSAGE": true,
-        "SMT_FISHING_REWARD": true
-        
+        "SMT_FISHING_REWARD": true,
+        "SMT_GQUEST_NORMAL_ACCEPT" : true,
+        "SMT_GQUEST_NORMAL_COMPLETE" : true,
+        "SMT_GQUEST_NORMAL_FAIL_OVERTIME" : true,
+        "SMT_GQUEST_NORMAL_END_NOTICE" : true,
+        "SMT_GQUEST_NORMAL_CARRYOUT" : true,
+        "SMT_GQUEST_OCCUPY_ACCEPT" : true,
+        "SMT_GQUEST_OCCUPY_COMPLETE" : true,
+        "SMT_GQUEST_OCCUPY_FAIL_OVERTIME" : true,
+        "SMT_GQUEST_NORMAL_CANCEL" : true,
+        "SMT_GQUEST_FAIL_ACCEPT" : true
     };
 
     mod.command.add("salt", {
             $none() { 
                 enabled = !enabled;
-			    mod.command.message(`Salt remover ${enabled ? 'en' : 'dis'}abled`)
+			    mod.command.message(`Salt remover ${enabled ? "en" : "dis"}abled`)
             }
     }, this);
 
