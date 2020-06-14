@@ -29,7 +29,9 @@ module.exports = function SaltRemover(mod) {
         "SMT_GQUEST_OCCUPY_COMPLETE" : true,
         "SMT_GQUEST_OCCUPY_FAIL_OVERTIME" : true,
         "SMT_GQUEST_NORMAL_CANCEL" : true,
-        "SMT_GQUEST_FAIL_ACCEPT" : true
+        "SMT_GQUEST_FAIL_ACCEPT" : true,
+	"SMT_BATTLE_BUFF_DEBUFF" : true,
+	"SMT_SKILL_NO_COOLTIME_COST" : true
     };
 
     mod.command.add("salt", {
