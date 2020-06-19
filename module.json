@@ -4,6 +4,7 @@
 	"author": "SaltyMonkey",
 	"description": "Removing useless messages from your screen caused by salt-events",
     "options": {
+        "cliName": "salt",
         "niceName": "Salt Remover"
     },
     "servers": ["https://raw.githubusercontent.com/SaltyMonkey/Salt-remover/master/"],
