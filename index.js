@@ -39,12 +39,17 @@ module.exports = function SaltRemover(mod) {
             }
     }, this);
 
-    mod.hook("S_SYSTEM_MESSAGE", 1, (event) => {
+    mod.hook("S_SYSTEM_MESSAGE", 1, { "order": 999999999, "filter": { "fake": null } }, (event) => {
         if (!enabled) return;
         return (smtList[mod.parseSystemMessage(event.message).id]) ? false : undefined;
     });
 
-    mod.hook("S_ABNORMALITY_FAIL", "raw", ()=> {
+    mod.hook("S_ABNORMALITY_FAIL", "raw", { "order": 999999999, "filter": { "fake": null } }, ()=> {
+        return enabled ? false : undefined;
+    });
+
+    mod.hook("S_CREST_MESSAGE", 2, { "order": 999999999, "filter": { "fake": null } }, (event) => {
+        if (event.type !== 6) return;
         return enabled ? false : undefined;
     });
 };
